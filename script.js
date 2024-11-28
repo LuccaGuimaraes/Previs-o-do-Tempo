@@ -1,6 +1,6 @@
 function getWeather() {
     const city = document.getElementById('city').value;
-    const apiKey = 'MeuAppPrevisaoTempo'; // Substitua pela sua chave de API
+    const apiKey = 'e2d0a4776ba38a33985283722733ab11'; 
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
     fetch(url)
