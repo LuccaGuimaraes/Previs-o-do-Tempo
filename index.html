@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Clima</title>
+</head> <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<body>
+    
+    <div class="container">
+        <h1>Bem-vindo!</h1>
+        <input type="text" id="city" placeholder="Digite o nome de cidade">
+        <button onclick="getWather()">Buscar</button>
+         
+        <div id="weather-info">
+            <p id="temperature"></p>
+            <p id="humidity"></p>
+            <p id="description"></p>
+         </div>
+         
+         <canvas id="myChart" ></canvas>   
+    </div>
+
+    
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
