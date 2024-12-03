@@ -5,13 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Clima</title>
-</head> <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+</head> 
 
 <body>
     
+    <video class="vd-cloudy"  autoplay muted loop id="bg-video">
+        <source  src="assets/cloudy.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos em HTML5.
+      </video>
+      
+      <video class="vd-sunny"  autoplay muted loop id="bg-video">
+        <source  src="assets/sunny.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos em HTML5.
+      </video>
+      
+      <video class="vd-rain"  autoplay muted loop id="bg-video">
+        <source  src="assets/rain.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos em HTML5.
+      </video>
+      
+      <video class="vd-storm"  autoplay muted loop id="bg-video">
+        <source  src="assets/storm.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos em HTML5.
+      </video>
+      
+      
+   
     <div class="container">
-        <h1>Bem-vindo!</h1>
-        <input type="text" id="city" placeholder="Digite o nome de cidade">
+        
+        <input  type="text" id="city" placeholder="Digite o nome de cidade">
         <button onclick="getWeather()">Buscar</button>
          
         <div id="weather-info">
@@ -20,12 +43,12 @@
             <p id="description"></p>
          </div>
          
-         <canvas id="myChart" ></canvas>   
+          
     </div>
 
     
     
 
-    <script src="script.js"></script>
+    <script type="module" src="scripts/script.js"></script>
 </body>
 </html>
