@@ -1,5 +1,6 @@
 import { getUserCoordinates } from './geo.js';
-import { fetchWeather } from './weather.js';
+import { NameCityWeather, fetchWeather } from './weather.js';
+import "./loader.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     const weatherInfoDiv = document.getElementById("weather-info");
@@ -14,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let { latitude, longitude } = coords;
 
         // Busca o clima
-        fetchWeather(latitude, longitude, (weatherData) => {
+          fetchWeather(latitude, longitude, (weatherData) => {
             if (!weatherData) {
                 weatherInfoDiv.innerText = "Não foi possível obter informações climáticas.";
                 return;
@@ -31,13 +32,13 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("description").innerText = `Condição: ${description}`;
 
             // Atualiza o vídeo de fundo
-            updateBackgroundVideo(weatherData.weather[0].main.toLowerCase());
+            updateBackgroundVideo(weatherData.weather[0].main.toLowerCase(), );
         });
     });
 });
 
 // Função para atualizar o vídeo de fundo
-function updateBackgroundVideo(condition) {
+export function updateBackgroundVideo(condition) {
     const videos = {
         cloudy: document.querySelector('.vd-cloudy'),
         sunny: document.querySelector('.vd-sunny'),
@@ -60,4 +61,8 @@ function updateBackgroundVideo(condition) {
     } else {
         videos.sunny.style.display = 'block'; // Condição padrão
     }
+
 }
+
+
+
