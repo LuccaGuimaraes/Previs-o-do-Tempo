@@ -88,6 +88,7 @@ function type() {
 }
 
 type();
+
 document.addEventListener("DOMContentLoaded", () => {
     const cityInput = document.getElementById("city"); // Campo de entrada
     const searchButton = document.getElementById("NameCityBtn"); // Botão de busca
