@@ -30,18 +30,36 @@
         Seu navegador não suporta vídeos em HTML5.
       </video>
       
+      <div class="bvd" id="writerAnimation">
+        
+      </div>
       
    
     <div class="container">
         
         <input  type="text" id="city" placeholder="Digite o nome de cidade">
         <button id="NameCityBtn">Buscar</button>
+
+        <div class="info-item">
+          <img src="assets/img-weather-info/location.png" alt="Ícone de localização" class="icon">
+          <p class="city-name" id="city-name"></p>
+      </div>
          
         <div id="weather-info">
-            <p id="temperature"></p>
-            <p id="humidity"></p>
-            <p id="description"></p>
-         </div>
+          <div class="info-item">
+              <img src="assets/img-weather-info/thermometer.png" alt="Ícone de temperatura" class="icon">
+              <p class="temp" id="temperature"></p>
+          </div>
+          <div class="info-item">
+              <img src="assets/img-weather-info/humidity-sensor.png" alt="Ícone de humidade" class="icon">
+              <p class="humidade" id="humidity"></p>
+          </div>
+          <div class="info-item">
+              <img src="assets/img-weather-info/info.png" alt="Ícone de descrição" class="icon">
+              <p class="description" id="description"></p>
+          </div>
+      </div>
+      
          
           
     </div>

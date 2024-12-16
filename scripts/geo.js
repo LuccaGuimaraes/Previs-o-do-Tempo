@@ -4,11 +4,17 @@ export function getUserCoordinates(callback) {
             (position) => {
                 const latitude = position.coords.latitude;
                 const longitude = position.coords.longitude;
+                console.log("Posição obtida:", position); // Log para depuração
                 callback({ latitude, longitude });
             },
             (error) => {
                 console.error("Erro ao obter localização:", error.message);
-                callback(null);
+                callback(null); // Chama o callback com null em caso de erro
+            },
+            {
+                enableHighAccuracy: true, // Solicita a maior precisão possível
+                timeout: 10000, // Tempo máximo para obter a localização (10s)
+                maximumAge: 0 // Não usa dados antigos em cache
             }
         );
     } else {

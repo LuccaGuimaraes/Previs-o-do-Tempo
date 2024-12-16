@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mogra&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
 body {
     margin: 0;
     display: flex;
@@ -15,6 +18,36 @@ body {
     
 }
 
+#writerAnimation{
+    position: absolute;
+    top: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    display: inline-block;
+    white-space: nowrap; /* Evita quebra de linha */
+    overflow: hidden; /* Esconde texto que não está visível */
+}
+
+.city-name {
+    font-size: 24px !important;
+    font-weight: 600 !important;
+    margin-bottom: 20px !important;
+}
+
+.info-item {
+    padding-top: 7px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon{
+height: 50px;
+box-sizing: left;
+}
+
+
 #bg-video{
     position: fixed;
     top: 0;
@@ -28,14 +61,14 @@ body {
 
 .container {
     background: linear-gradient(135deg, 
-        rgba(255, 255, 255, 0.1) 0%,
-        rgba(255, 255, 255, 0.2) 100%
+        rgba(77, 76, 76, 0.1) 0%,
+        rgba(128, 121, 121, 0.082) 100%
     );
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(35px);
     padding: 40px;
     border-radius: 20px;
     text-align: center;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.342);
     width: 100%;
     max-width: 400px;
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -45,7 +78,7 @@ body {
 input {
     padding: 12px 20px;
     width: 80%;
-    margin: 10px;
+    margin: 7px;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     background-color: rgba(255, 255, 255, 0.1);
@@ -77,6 +110,11 @@ input:focus {
 
 
 button {
+    background-image: -webkit-linear-gradient(top, #0C93C0, #FFF); 
+    background-image:    -moz-linear-gradient(top, #0C93C0, #FFF); 
+    background-image:     -ms-linear-gradient(top, #0C93C0, #FFF); 
+    background-image:      -o-linear-gradient(top, #0C93C0, #FFF); 
+    background-image:         linear-gradient(top, #0C93C0, #FFF);
     padding: 12px 24px;
     width: 50%;
     border-radius: 12px;
@@ -106,6 +144,7 @@ button:hover {
 }
 
 #weather-info p {
+    gap: 10px;
     font-size: 16px;
     margin: 10px;
     color: white;
